@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cashfree Checkout Integration</title>
+    <script src="https://sdk.cashfree.com/js/v3/cashfree.js"></script>
+</head>
+<body>
+    <div class="row">
+        <p>Click below to open the checkout page in current tab</p>
+        <button id="renderBtn">Pay Now</button>
+    </div>
+
+    <script>
+        let paymentSessionId = ""; // Store session ID
+
+        // Fetch session ID from local JSON via Express API
+        fetch("/get-session-id")
+            .then(response => response.json())
+            .then(data => {
+                if (data.payment_session_id) {
+                    paymentSessionId = data.payment_session_id;
+                    console.log("Loaded Payment Session ID:", paymentSessionId);
+                } else {
+                    console.error("Failed to fetch session ID");
+                }
+            })
+            .catch(error => console.error("Error fetching session ID:", error));
+
+        // Initialize Cashfree on button click
+        document.getElementById("renderBtn").addEventListener("click", () => {
+            if (!paymentSessionId) {
+                alert("Payment session ID not found. Please refresh and try again.");
+                return;
+            }
+
+            const cashfree = Cashfree({ mode: "sandbox" }); // Change to "production" for live
+            cashfree.checkout({
+                paymentSessionId: paymentSessionId,
+                redirectTarget: "_self",
+            });
+        });
+    </script>
+</body>
+</html>
