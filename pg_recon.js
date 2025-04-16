@@ -6,13 +6,13 @@ const fetchReconData = async (environment) => {
   const configs = {
     prod: {
       baseUrl: "https://api.cashfree.com/pg/recon",
-      clientId: "145084e43c71b20eab47a2a4b80541",
-      clientSecret: "4fd43d83c9728bcd520f6018dea066d68cdc41d"
+      clientId: "14508*********************0541",
+      clientSecret: "4fd43d********************dc41d"
     },
     test: {
       baseUrl: "https://sandbox.cashfree.com/pg/recon",
-      clientId: "TEST1046158887d155c9e8211d92afcb88516401",
-      clientSecret: "cfsk_ma_test_39540eff719307418bb4a5cfb8e914a3_3faa51fd"
+      clientId: "TEST1******************************6401",
+      clientSecret: "cfsk_ma***************************3faa51fd"
     }
   };
 
