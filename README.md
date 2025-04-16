@@ -15,6 +15,21 @@ This repository provides sample Node.js scripts demonstrating how to interact wi
 - Node.js installed on your machine.
 - Cashfree sandbox or production account credentials.
 
+Store the creds in below format under file api_keys.json
+
+{
+    "Test": {
+      "client_id": "111235********c5532111",
+      "client_secret": "TEST307e0**********10fa8a69653d7d"
+    },
+    "Prod": {
+      "client_id": "1450***********************541",
+      "client_secret": "4fd4************************cdc41d"
+    }
+  }
+
+
+
 ## Setup
 
 1. Clone the repository:
