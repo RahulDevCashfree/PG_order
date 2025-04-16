@@ -8,12 +8,12 @@ const environment = "Test"; // Use 'Test' or 'Prod'
 const Cashfree = {
   XClientId:
     environment === "Test"
-      ? "11123595750e973ecc95c94ec5532111" // Test Client ID
-      : "145084e43c71b20eab47a2a4b80541", // Production Client ID
+      ? "11123*********************5532111" // Test Client ID
+      : "14508************************80541", // Production Client ID
   XClientSecret:
     environment === "Test"
-      ? "TEST307e06bddd583cc3f86edf02f410fa8a69653d7d" // Test Client Secret
-      : "4fd43d83c9728bcd520f6018dea066d68cdc41d", // Production Client Secret
+      ? "TEST30************************53d7d" // Test Client Secret
+      : "4fd43**************************c41d", // Production Client Secret
 };
 
 // Base URL Based on Environment
