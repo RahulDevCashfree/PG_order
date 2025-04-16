@@ -9,8 +9,8 @@ const headers = {
   accept: "application/json",
   "content-type": "application/json",
   "x-api-version": "2023-08-01",
-  "x-client-id": "TEST1046158887d155c9e8211d92afcb88516401",
-  "x-client-secret": "cfsk_ma_test_39540eff719307418bb4a5cfb8e914a3_3faa51fd",
+  "x-client-id": "TEST104********************************6401",
+  "x-client-secret": "cfsk_ma_tes*************************3faa51fd",
 };
 
 // Request Body
